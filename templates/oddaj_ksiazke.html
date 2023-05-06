@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oddaj książkę</title>
+</head>
+<body>
+	<h1>Oddaj książkę</h1>
+	<form method="POST" action="/oddaj_ksiazke">
+        <label for="tytul">Tytuł książki:</label>
+        <input type="text" name="tytul" id="tytul">
+        <input type="submit" value="Oddaj książkę">
+    </form>
+	{% if komunikat %}
+	<p>{{ komunikat }}</p>
+	{% endif %}
+</body>
+</html>
+{% endblock %}

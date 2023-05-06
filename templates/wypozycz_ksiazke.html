@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block content %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Wypożycz książkę</title>
+  </head>
+  <body>
+    <h1>Wypożycz książkę</h1>
+    {% if komunikat %}
+      <p>{{ komunikat }}</p>
+    {% endif %}
+
+    <form method="POST" action="/wypozycz_ksiazke">
+      <label for="tytul">Tytuł książki:</label>
+      <input type="text" id="tytul" name="tytul" required><br><br>
+      <label for="data_wypozyczenia">Data wypożyczenia:</label>
+      <input type="date" id="data_wypozyczenia" name="data_wypozyczenia" required><br><br>
+      <label for="data_zwrotu">Data zwrotu:</label>
+      <input type="date" id="data_zwrotu" name="data_zwrotu" required><br><br>
+      <input type="submit" value="Wypożycz">
+    </form>
+  </body>
+</html>
+{% endblock %}

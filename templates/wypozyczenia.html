@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Tytuł</th>
+        <th>Nazwisko autora</th>
+        <th>Data wypozyczenia</th>
+        <th>Data zwrotu</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for wypozyczenie in wypozyczenia %}
+      <tr>
+        <td class="py-2">{{ wypozyczenie[1] }}</td>
+        <td class="py-2">{{ wypozyczenie[2] }}</td>
+        <td class="py-2">{{ wypozyczenie[3] }}</td>
+        <td class="py-2">{{ wypozyczenie[4] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <h1> Dodaj książkę </h1>
+  <<form method="post" action="/dodaj_ksiazke">
+    <div>
+        <label for="tytul"> Tytuł:</label>
+        <input type="text" id="tytul" name="tytul">
+    </div>
+    <div>
+        <label for="rok_wydania"> Rok wydania:</label>
+        <input type="text" id="rok_wydania" name="rok_wydania">
+    </div>
+    <div>
+        <label for="imie_autora"> Imię autora:</label>
+        <input type="text" id="imie_autora" name="imie_autora">
+    </div>
+    <div>
+        <label for="nazwisko_autora"> Nazwisko autora:</label>
+        <input type="text" id="nazwisko_autora" name="nazwisko_autora">
+    </div>
+    <div>
+        <input type="submit" value="Dodaj książkę">
+    </div>
+</form>
+
+  {% if komunikat %}
+  <div class="alert alert-success">{{ komunikat }}</div>
+  {% endif %}
+
+  {% if komunikat_A %}
+  <div class="alert alert-success">{{ komunikat_A }}</div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Tytul</th>
+        <th>Rok wydania</th>
+        <th>Imię autora</th>
+        <th>Nazwisko autora</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ksiazka in ksiazki %}
+      <tr>
+        <td class="py-2">{{ ksiazka[1] }}</td>
+        <td class="py-2">{{ ksiazka[2] }}</td>
+        <td class="py-2">{{ ksiazka[3] }}</td>
+        <td class="py-2">{{ ksiazka[4] }}</td>
+        <td class="py-2">{{ ksiazka[5] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
